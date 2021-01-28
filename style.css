@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 93.75%; /* 15px */
+}
+
 body {
   background-color: #F0F2F5;
   font-family: 'Poppins', sans-serif;
@@ -109,6 +113,13 @@ header h1 {
 }
 
 /* Table ================ */
+#transaction {
+  display: block;
+  width: 100%;
+  
+  overflow-x: auto;
+}
+
 #data-table {
   width: 100%;
   border-spacing: 0 .5rem;
@@ -167,4 +178,17 @@ footer {
   color: var(--dark-blue);
 
   opacity: .6;
+}
+
+/* Responsive ================ */
+@media (min-width: 800px) {
+  html {
+    font-size: 87.5%; /* 14px */
+  }
+
+  #balance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
