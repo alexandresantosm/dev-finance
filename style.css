@@ -30,6 +30,21 @@ body {
   margin: auto;
 }
 
+/* Links and Buttons ================ */
+a {
+  color: #49AA26;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3DD705;
+}
+
+.button.new {
+  display: inline-block;
+  margin-bottom: .8rem;
+}
+
 /* Titles ================ */
 h2 {
   margin-top: 3.2rem;
