@@ -1,6 +1,10 @@
 /* Global ================ */
 :root {
   --dark-blue:#353F5F;
+  --green:#49AA26;
+  --light-green:#3DD705;
+  --dark-green:#2D4A22;
+  --red:#E92929;
 }
 
 * {
@@ -36,17 +40,56 @@ body {
 
 /* Links and Buttons ================ */
 a {
-  color: #49AA26;
+  color: var(--green);
   text-decoration: none;
 }
 
 a:hover {
-  color: #3DD705;
+  color:var(--light-green);
+}
+
+button {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+
+  color: white;
+
+  background-color: var(--green);
+
+  padding: 0;
+
+  border-radius: .25rem;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--light-green);
 }
 
 .button.new {
   display: inline-block;
   margin-bottom: .8rem;
+}
+
+.button.cancel {
+  color: var(--red);
+  border: 2px solid var(--red);
+  border-radius: .25rem;
+
+  height: 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: .6;
+}
+
+.button.cancel:hover {
+  opacity: 1;
 }
 
 /* Titles ================ */
@@ -60,7 +103,7 @@ h2 {
 
 /* Header ================ */
 header {
-  background-color: #2D4A22;
+  background-color: var(--dark-green);
   padding: 2rem 0 10rem;
   text-align: center;
 }
@@ -108,7 +151,7 @@ header h1 {
 }
 
 .card.total {
-  background-color: #49AA26;
+  background-color: var(--green);
   color: white;
 }
 
@@ -116,7 +159,7 @@ header h1 {
 #transaction {
   display: block;
   width: 100%;
-  
+
   overflow-x: auto;
 }
 
@@ -168,7 +211,71 @@ td.income {
 }
 
 td.expense {
-  color: #E92929;
+  color: var(--red);
+}
+/* Modal ================ */
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, .7);
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background-color: #F0F2F5;
+  padding: 2.4rem;
+}
+
+/* Form ================ */
+#form {
+  max-width: 500px;
+}
+
+#form h2 {
+  margin-top: 0;
+}
+
+input {
+  border: none;
+  border-radius: .2rem;
+
+  padding: .8rem;
+
+  width: 100%;
+}
+
+.input-group {
+  margin-top: .8rem;
+}
+
+.input-group small {
+  opacity: .4;
+}
+
+.input-group.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-group.actions a.button,
+.input-group.actions button {
+  width: 48%;
 }
 
 /* Footer ================ */
