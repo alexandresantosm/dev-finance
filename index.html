@@ -53,7 +53,7 @@
 
       <a 
         href="#" 
-        onclick="Modal.open()"
+        onclick="Modal.toggleActive()"
         class="button new"
       >
         + Nova Transação
@@ -155,7 +155,7 @@
           <div class="input-group actions">
             <a 
             href="#" 
-            onclick="Modal.close()"
+            onclick="Modal.toggleActive()"
             class="button cancel">
               Cancelar
             </a>
@@ -171,22 +171,7 @@
     <p>2021 - dev.finance$</p>
   </footer>
 
-  <script>
-    const Modal = {
-      open() {
-        document
-          .querySelector('.modal-overlay')
-            .classList
-              .add('active');
-      },
-      close() {
-        document
-          .querySelector('.modal-overlay')
-            .classList
-              .remove('active');
-      }
-    }
-  </script>
+  <script src="./scripts.js"></script>
 </body>
 
 </html>
